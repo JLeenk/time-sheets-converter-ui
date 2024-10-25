@@ -1,0 +1,3 @@
+dispatch:
+  - url: "time-sheets-converter.jleenksystem.dev/*"
+    service: time-sheets-converter
