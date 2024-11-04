@@ -1,11 +1,6 @@
 <div>
   <div *ngIf="userId">
-    <div>
-      <h3>Work with structure</h3>
-      <button (click)="createRootFolder()" [disabled]="createButtonCheck()">Create root Folder</button>
-      <button (click)="deleteRootFolder()">Delete root Folder</button>
-      <p>{{ rootFolderIdResp.folderIdMessage }}</p>
-    </div>
+    <app-structure [userId]="userId"></app-structure>
     <div *ngIf="rootFolderIdResp.folderId">
       <div>
         <h3>Generate reports</h3>
