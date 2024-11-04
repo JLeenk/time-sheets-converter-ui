@@ -1,0 +1,9 @@
+<div *ngIf="userId">
+    <h3>Work with structure</h3>
+    <button (click)="onCreateRootFolder()" [disabled]="disableCreateButton">Create root Folder</button>
+    <button (click)="onDeleteRootFolder()" [disabled]="disableDeleteButton">Delete root Folder</button>
+    <p>{{ structureMessage }}</p>
+    <div *ngIf="rootFolderID">
+        <app-upload [userId]="userId"></app-upload>
+    </div>
+</div>

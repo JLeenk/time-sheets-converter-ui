@@ -8,13 +8,24 @@ import { FailureComponent } from './components/failure/failure.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ManagerComponent } from './components/manager/manager.component';
+<<<<<<< Updated upstream
+=======
+import { StructureComponent } from './components/structure/structure.component';
+import { UploadComponent } from './components/upload/upload.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
     AppComponent,
     OauthComponent,
     FailureComponent,
+<<<<<<< Updated upstream
     ManagerComponent
+=======
+    ManagerComponent,
+    StructureComponent,
+    UploadComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

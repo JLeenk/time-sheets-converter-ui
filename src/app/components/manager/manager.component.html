@@ -8,43 +8,8 @@
     </div>
     <div *ngIf="rootFolderIdResp.folderId">
       <div>
-        <h3>Upload Time Sheet Template</h3>
-        <input type="file" (change)="onTimeSheetTemplateSelected($event)">
-        <button (click)="onUploadTimeSheetTemplate()" [disabled]="!timeSheetTemplate">Upload</button>
-        <button (click)="onDownloadTimeSheetTemplate()">Download Time Sheet Template File</button>
-
-        <div *ngIf="timeSheetTemplateMessage">
-          <p>Progress: {{ timeSheetTemplateMessage }}</p>
-        </div>
-
-      </div>
-      <div>
-        <h3>Upload Report Template</h3>
-        <input type="file" (change)="onReportTemplateSelected($event)">
-        <button (click)="onUploadReporTemplate()" [disabled]="!reportTemplateTemplate">Upload</button>
-        <button (click)="onDownloadReportTemplate()">Download Time Sheet Template File</button>
-
-        <div *ngIf="reportTemplateMessage">
-          <p>Progress: {{ reportTemplateMessage }}</p>
-        </div>
-
-      </div>
-      <div>
-        <h3>Upload Time Sheets</h3>
-        <input type="file" (change)="onFileSelected($event)" multiple />
-        <button (click)="onUploadTimeSheetsFiles()" [disabled]="!selectedFiles.length">Load Files</button>
-        <button (click)="onDeleteAllTimeSheetsFiles()">Clean the Time Sheet folder</button>
-        <p *ngIf="deleteTimeSheetsMessage">Status {{ deleteTimeSheetsMessage }}</p>
-        <ul>
-          <li *ngFor="let file of timeSheetStatus">
-            {{ file.name }} - {{ file.status }}
-          </li>
-        </ul>
-      </div>
-      <div>
         <h3>Generate reports</h3>
         <button (click)="onGenerateReports()">Generate Reports</button>
-        <button (click)="onDeleteAllTimeSheetsFiles()">Clean the Reports folder</button>
         <p *ngIf="generateReportsMessage">Status: {{ generateReportsMessage }}</p>
       </div>
     </div>
