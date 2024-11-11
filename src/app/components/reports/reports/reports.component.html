@@ -1,0 +1,5 @@
+<div>
+    <h3>Generate reports</h3>
+    <button (click)="onGenerateReports()" [disabled]="disableGenerateReportButton">Generate Reports</button>
+    <p *ngIf="generateReportsMessage">Status: {{ generateReportsMessage }}</p>
+</div>
