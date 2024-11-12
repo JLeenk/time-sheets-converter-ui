@@ -41,7 +41,6 @@ export class UploadService {
 
     return this.http.post<string>(`${this.apiUrl}/${path}`, formData, {
       params: params,
-      reportProgress: true,
       observe: 'events'
     }).pipe(
       map(event => this.getEventMessage(event, file)),

@@ -1,7 +1,7 @@
 <div>
     <div>
         <h3>Upload Time Sheet Template</h3>
-        <input type="file" (change)="onTimeSheetTemplateSelected($event)">
+        <input type="file" (change)="onTimeSheetTemplateSelected($event)" [disabled]="disableAllButtons">
         <button (click)="onUploadTimeSheetTemplate()" [disabled]="timeSheetTemplateDisabled || disableAllButtons">Upload</button>
         <button (click)="onDownloadTimeSheetTemplate()" [disabled]="disableAllButtons">Download Time Sheet Template File</button>
 
@@ -12,7 +12,7 @@
     </div>
     <div>
         <h3>Upload Report Template</h3>
-        <input type="file" (change)="onReportTemplateSelected($event)">
+        <input type="file" (change)="onReportTemplateSelected($event)" [disabled]="disableAllButtons">
         <button (click)="onUploadReporTemplate()" [disabled]="reportTemplateDisabled || disableAllButtons">Upload</button>
         <button (click)="onDownloadReportTemplate()" [disabled]="disableAllButtons">Download Time Sheet Template File</button>
 
@@ -23,7 +23,7 @@
     </div>
     <div>
         <h3>Upload Time Sheets</h3>
-        <input type="file" (change)="onFileSelected($event)" multiple />
+        <input type="file" (change)="onFileSelected($event)" multiple [disabled]="disableAllButtons" />
         <button (click)="onUploadTimeSheetsFiles()" [disabled]="timeSheetsDisabled || disableAllButtons">Load Files</button>
         <button (click)="onDeleteAllTimeSheetsFiles()" [disabled]="disableAllButtons">Clean the Time Sheet folder</button>
         <p *ngIf="deleteTimeSheetsMessage">Clean is {{ deleteTimeSheetsMessage }}</p>

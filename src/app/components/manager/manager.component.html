@@ -1,12 +1,5 @@
 <div>
   <div *ngIf="userId">
     <app-structure [userId]="userId"></app-structure>
-    <div *ngIf="rootFolderIdResp.folderId">
-      <div>
-        <h3>Generate reports</h3>
-        <button (click)="onGenerateReports()">Generate Reports</button>
-        <p *ngIf="generateReportsMessage">Status: {{ generateReportsMessage }}</p>
-      </div>
-    </div>
   </div>
 </div>

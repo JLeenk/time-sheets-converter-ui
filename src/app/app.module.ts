@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ManagerComponent } from './components/manager/manager.component';
 import { StructureComponent } from './components/structure/structure.component';
 import { UploadComponent } from './components/upload/upload.component';
+import { ReportsComponent } from './components/reports/reports/reports.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UploadComponent } from './components/upload/upload.component';
     FailureComponent,
     ManagerComponent,
     StructureComponent,
-    UploadComponent
+    UploadComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,

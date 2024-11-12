@@ -34,22 +34,5 @@ export class ManagerComponent implements OnInit {
     });
   }
 
-  onGenerateReports(): void {
-    if (this.userId) {
-      this.generateReportsMessage = GenerateReportsStatus.INPROCESS;
-      this.service.generateReports(this.userId).subscribe({
-        next: (progress) => {
-          this.uploadFileService.checkGenerateReportsStatus(this.userId);
-        },
-        error: (err) => {
-          if (err.status == 503) {
-            this.generateReportsMessage = "Server busy please wait until Reports will be generated"
-          } else {
-            console.error('Upload Error:', err);
-            this.generateReportsMessage = FileLoadStatus.ERROR;
-          }
-        }
-      });
-    }
-  }
+  
 }
